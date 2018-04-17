@@ -1,0 +1,345 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F5EDC0C20858854004A35EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EDC0B20858854004A35EC /* AppDelegate.swift */; };
+		6F5EDC0E20858854004A35EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EDC0D20858854004A35EC /* ViewController.swift */; };
+		6F5EDC1120858854004A35EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F5EDC0F20858854004A35EC /* Main.storyboard */; };
+		6F5EDC1320858854004A35EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F5EDC1220858854004A35EC /* Assets.xcassets */; };
+		6F5EDC1620858854004A35EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F5EDC1420858854004A35EC /* LaunchScreen.storyboard */; };
+		6F5EDC1E2085889F004A35EC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EDC1D2085889F004A35EC /* TabBarController.swift */; };
+		6F7EDA442085F0B4001720A5 /* KICustomNavAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7EDA422085F0B4001720A5 /* KICustomNavAnimation.swift */; };
+		6F7EDA452085F0B4001720A5 /* KINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7EDA432085F0B4001720A5 /* KINavigationController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6F5EDC0820858854004A35EC /* KINavigationControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KINavigationControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F5EDC0B20858854004A35EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6F5EDC0D20858854004A35EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6F5EDC1020858854004A35EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6F5EDC1220858854004A35EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6F5EDC1520858854004A35EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6F5EDC1720858854004A35EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F5EDC1D2085889F004A35EC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		6F7EDA422085F0B4001720A5 /* KICustomNavAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KICustomNavAnimation.swift; sourceTree = "<group>"; };
+		6F7EDA432085F0B4001720A5 /* KINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KINavigationController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F5EDC0520858854004A35EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F5EDBFF20858854004A35EC = {
+			isa = PBXGroup;
+			children = (
+				6F5EDC0A20858854004A35EC /* KINavigationControllerDemo */,
+				6F5EDC0920858854004A35EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6F5EDC0920858854004A35EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F5EDC0820858854004A35EC /* KINavigationControllerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F5EDC0A20858854004A35EC /* KINavigationControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6F7EDA412085F0B4001720A5 /* KINavigationController */,
+				6F5EDC0B20858854004A35EC /* AppDelegate.swift */,
+				6F5EDC0D20858854004A35EC /* ViewController.swift */,
+				6F5EDC1D2085889F004A35EC /* TabBarController.swift */,
+				6F5EDC0F20858854004A35EC /* Main.storyboard */,
+				6F5EDC1220858854004A35EC /* Assets.xcassets */,
+				6F5EDC1420858854004A35EC /* LaunchScreen.storyboard */,
+				6F5EDC1720858854004A35EC /* Info.plist */,
+			);
+			path = KINavigationControllerDemo;
+			sourceTree = "<group>";
+		};
+		6F7EDA412085F0B4001720A5 /* KINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				6F7EDA422085F0B4001720A5 /* KICustomNavAnimation.swift */,
+				6F7EDA432085F0B4001720A5 /* KINavigationController.swift */,
+			);
+			path = KINavigationController;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6F5EDC0720858854004A35EC /* KINavigationControllerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F5EDC1A20858854004A35EC /* Build configuration list for PBXNativeTarget "KINavigationControllerDemo" */;
+			buildPhases = (
+				6F5EDC0420858854004A35EC /* Sources */,
+				6F5EDC0520858854004A35EC /* Frameworks */,
+				6F5EDC0620858854004A35EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KINavigationControllerDemo;
+			productName = KINavigationController;
+			productReference = 6F5EDC0820858854004A35EC /* KINavigationControllerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F5EDC0020858854004A35EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = MaChat;
+				TargetAttributes = {
+					6F5EDC0720858854004A35EC = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6F5EDC0320858854004A35EC /* Build configuration list for PBXProject "KINavigationControllerDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6F5EDBFF20858854004A35EC;
+			productRefGroup = 6F5EDC0920858854004A35EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F5EDC0720858854004A35EC /* KINavigationControllerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F5EDC0620858854004A35EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F5EDC1620858854004A35EC /* LaunchScreen.storyboard in Resources */,
+				6F5EDC1320858854004A35EC /* Assets.xcassets in Resources */,
+				6F5EDC1120858854004A35EC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F5EDC0420858854004A35EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F5EDC1E2085889F004A35EC /* TabBarController.swift in Sources */,
+				6F7EDA452085F0B4001720A5 /* KINavigationController.swift in Sources */,
+				6F7EDA442085F0B4001720A5 /* KICustomNavAnimation.swift in Sources */,
+				6F5EDC0E20858854004A35EC /* ViewController.swift in Sources */,
+				6F5EDC0C20858854004A35EC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6F5EDC0F20858854004A35EC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F5EDC1020858854004A35EC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6F5EDC1420858854004A35EC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F5EDC1520858854004A35EC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6F5EDC1820858854004A35EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6F5EDC1920858854004A35EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6F5EDC1B20858854004A35EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/KINavigationControllerDemo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MaChat.KINavigationController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6F5EDC1C20858854004A35EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/KINavigationControllerDemo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MaChat.KINavigationController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F5EDC0320858854004A35EC /* Build configuration list for PBXProject "KINavigationControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F5EDC1820858854004A35EC /* Debug */,
+				6F5EDC1920858854004A35EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F5EDC1A20858854004A35EC /* Build configuration list for PBXNativeTarget "KINavigationControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F5EDC1B20858854004A35EC /* Debug */,
+				6F5EDC1C20858854004A35EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F5EDC0020858854004A35EC /* Project object */;
+}
