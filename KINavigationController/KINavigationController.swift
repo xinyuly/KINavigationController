@@ -25,7 +25,7 @@ class KINavigationController: UINavigationController {
     fileprivate var lastScreenShotView: UIImageView?
     fileprivate var isMoving: Bool?
     private let screenShotsList = NSMutableArray()
-    private let customAnimation = KICustomNavAnimation()
+    let customAnimation = KICustomNavAnimation()
     
     private var TOP_VIEW: UIView?  {
         //当控制器没有初始化结束时，获取的keyWindow值为空

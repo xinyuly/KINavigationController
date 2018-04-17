@@ -27,7 +27,7 @@ class KICustomNavAnimation: NSObject {
     /// 导航栏Pop多个控制器时，需删除了多张截图
     var removeCount: Int = 0
     /// 截屏数组
-    private let screenShotArray = NSMutableArray()
+    let screenShotArray = NSMutableArray()
     /// 所属的导航栏有没有TabBarController
     private var isTabbar: Bool?
     
@@ -39,16 +39,6 @@ class KICustomNavAnimation: NSObject {
         screenShotArray.removeLastObject()
     }
     
-    private func getScreenshot() -> UIImage? {
-        guard let top_view = UIApplication.shared.keyWindow?.rootViewController?.view else {
-            return nil
-        }
-        UIGraphicsBeginImageContextWithOptions(top_view.bounds.size, top_view.isOpaque, 0.0)
-        top_view.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image
-    }
 }
 
 extension KICustomNavAnimation: UIViewControllerAnimatedTransitioning {
@@ -138,4 +128,14 @@ extension KICustomNavAnimation: UIViewControllerAnimatedTransitioning {
         }
     }
     
+    private func getScreenshot() -> UIImage? {
+        guard let top_view = UIApplication.shared.keyWindow?.rootViewController?.view else {
+            return nil
+        }
+        UIGraphicsBeginImageContextWithOptions(top_view.bounds.size, top_view.isOpaque, 0.0)
+        top_view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
 }

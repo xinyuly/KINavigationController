@@ -13,8 +13,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/xinyuly/KINavigationController.git', :tag => s.version }
 
   s.source_files  = "KINavigationController/*.swift"
+
   s.requires_arc = true
-
- s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
-
+  s.pod_target_xcconfig  = { 'SWIFT_VERSION' => '4.0' }
 end
