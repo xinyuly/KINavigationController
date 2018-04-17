@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = {"lixinyu" => 'li_xinyuly@163.com'}
 
-  s.ios.deployment_target = "8.0"
+  s.ios.deployment_target = "9.0"
 
   s.source       = { :git => 'https://github.com/xinyuly/KINavigationController.git', :tag => s.version }
 
