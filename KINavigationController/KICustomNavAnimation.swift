@@ -12,24 +12,11 @@ import UIKit
 class KICustomNavAnimation: NSObject {
 
     var navigationOperation: UINavigationControllerOperation?
-    
-    weak var navigationController: UINavigationController? {
-        didSet {
-            let vc = navigationController?.view.window?.rootViewController
-            if vc == navigationController?.tabBarController {
-                isTabbar = true
-            } else {
-                isTabbar = false
-            }
-        }
-    }
-    
+    weak var navigationController: UINavigationController?
     /// 导航栏Pop多个控制器时，需删除了多张截图
     var removeCount: Int = 0
     /// 截屏数组
     let screenShotArray = NSMutableArray()
-    /// 所属的导航栏有没有TabBarController
-    private var isTabbar: Bool?
     
     func removeAllScreenShot() {
         screenShotArray.removeAllObjects()
@@ -54,8 +41,9 @@ extension KICustomNavAnimation: UIViewControllerAnimatedTransitioning {
         let screentImgView = UIImageView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight))
         let screenImg = self.getScreenshot()
         screentImgView.image = screenImg
-        
+         //fromViewController,fromView
         let fromViewController = transitionContext.viewController(forKey: .from)
+         //toViewController，toView
         let toViewController = transitionContext.viewController(forKey: .to)
         let toView = transitionContext.view(forKey: .to)
         
@@ -129,7 +117,11 @@ extension KICustomNavAnimation: UIViewControllerAnimatedTransitioning {
     }
     
     private func getScreenshot() -> UIImage? {
-        guard let top_view = UIApplication.shared.keyWindow?.rootViewController?.view else {
+//        guard let top_view = UIApplication.shared.keyWindow?.rootViewController?.view else {
+//            return nil
+//        }
+        //使用navigationController?.view的页面截图才能接到导航栏
+        guard let top_view = navigationController?.view else {
             return nil
         }
         UIGraphicsBeginImageContextWithOptions(top_view.bounds.size, top_view.isOpaque, 0.0)

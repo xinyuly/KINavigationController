@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "KINavigationController"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "三种popViewController的效果,例如淘宝、京东的“整体返回”效果"
 
   s.homepage     = "https://github.com/xinyuly/KINavigationController"

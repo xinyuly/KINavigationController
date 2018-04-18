@@ -24,18 +24,24 @@ class KINavigationController: UINavigationController {
     fileprivate var backgroundView: UIView?
     fileprivate var lastScreenShotView: UIImageView?
     fileprivate var isMoving: Bool?
-    private let screenShotsList = NSMutableArray()
+    private var screenShotsList = NSMutableArray()
     let customAnimation = KICustomNavAnimation()
     
     private var TOP_VIEW: UIView?  {
-        //当控制器没有初始化结束时，获取的keyWindow值为空
-        get { return UIApplication.shared.keyWindow?.rootViewController?.view }
+        get {
+            return self.view
+        }
     }
     private let kScreenWidth = UIScreen.main.bounds.width
     private let kScreenHeight = UIScreen.main.bounds.height
     private let kMAXWidth =  UIScreen.main.bounds.width   //Maximum width to move
     
     //MARK: - Life Cycle
+    deinit {
+        backgroundView?.removeFromSuperview()
+        backgroundView = nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
@@ -57,9 +63,11 @@ class KINavigationController: UINavigationController {
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        let screenshot = getScreenshot()
-        if screenshot != nil {
-            screenShotsList.add(screenshot!)
+        if self.viewControllers.count >= 1 {
+            let screenshot = getScreenshot()
+            if screenshot != nil {
+                screenShotsList.add(screenshot!)
+            }
         }
         super.pushViewController(viewController, animated: animated)
     }
@@ -72,7 +80,7 @@ class KINavigationController: UINavigationController {
     
     override func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
         var removeCount = 0
-        for i in stride(from: viewControllers.count, to: 0, by: -1) {
+        for i in stride(from: viewControllers.count-1, to: 0, by: -1) {
             if viewController == viewControllers[i] {
                 break
             }
@@ -98,6 +106,7 @@ class KINavigationController: UINavigationController {
         top_view.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+
         return image
     }
     //  设置最后一张截图随着手指变化的位置和透明度
@@ -200,7 +209,7 @@ extension KINavigationController: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         customAnimation.navigationController = self
         customAnimation.navigationOperation = operation
-        
+
         return customAnimation
     }
 }
@@ -215,7 +224,7 @@ extension KINavigationController: UIGestureRecognizerDelegate {
     
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         if gestureRecognizer == self.interactivePopGestureRecognizer {
-            
+            paningGestureReceive(recoginzer: gestureRecognizer as! UIPanGestureRecognizer)
             return true
         }
         return true

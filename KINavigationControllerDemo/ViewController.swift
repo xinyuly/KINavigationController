@@ -12,7 +12,9 @@ class ViewController: UIViewController {
 
     lazy var textLabel: UILabel = {
         let textLabel = UILabel(frame: CGRect(x: 30, y: 100, width: 60, height: 40))
-        textLabel.text = String(format:"%d",(navigationController?.viewControllers.count)!)
+        if let nav = navigationController {
+            textLabel.text = String(format:"%d",(navigationController?.viewControllers.count)!)
+        }
         return textLabel
     } ()
     
@@ -45,13 +47,21 @@ class ViewController: UIViewController {
         guard let navi = navigationController else { return }
         if navi.viewControllers.count > 1 {
             self.showLeftBarItem(imageName: "icon_nav_back", highlightedImage: "icon_nav_back", selector: #selector(back))
+        } else {
+             self.showLeftBarItem(imageName: "icon_nav_back", highlightedImage: "icon_nav_back", selector: #selector(back1))
         }
         
     }
     
     @objc func back() {
         navigationController?.popViewController(animated: true)
+
     }
+    
+    @objc func back1() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @objc func nextViewController() {
         let vc = ViewController()
         vc.hidesBottomBarWhenPushed = true
@@ -60,6 +70,13 @@ class ViewController: UIViewController {
     
     @objc func popViewController() {
         navigationController?.popToRootViewController(animated: true)
+        
+//        let vc = KINavigationController(rootViewController: ViewController())
+//        self.present(vc, animated: true, completion: nil)
+//        guard let nav = navigationController else {return}
+//        let vc = nav.viewControllers[nav.viewControllers.count - 3]
+//
+//        navigationController?.popToViewController(vc, animated: true)
     }
     
     func showLeftBarItem(imageName: String, highlightedImage:String,selector:Selector? ) {
